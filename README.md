@@ -1,191 +1,329 @@
 # Apatheia
 
-**Apatheia** is a security automation engine and protocol designed to keep remote workers, freelancers, and distributed teams **safe by default**.
+> **An individual security hygiene protocol aligned with SOC 2 security principles.**
 
-Originally built as an Electron JS task-highlighting and reminder engine, Apatheia is evolving into a **ready-to-import security framework for RMM platforms** such as **NinjaOne**, with support for scheduled checks, policy enforcement, and security posture visibility.
+Apatheia is an open-source security hygiene framework that helps individuals build consistent cybersecurity habits through scheduled controls, documented procedures, and measurable compliance.
 
-The goal is simple:
+Unlike enterprise security frameworks, Apatheia focuses on **one person protecting one workstation** while following practices inspired by modern security programs such as SOC 2.
 
-> **Make good security hygiene unavoidable, lightweight, and verifiable.**
+The objective is simple:
 
----
-
-## What Apatheia Is
-
-* A **security checklist engine** with opinionated best practices
-* A **task scheduling and reminder system**
-* A **public-use protocol** for remote work safety
-* A **foundation for RMM integrations** (NinjaOne, etc.)
-* A **human-readable + machine-executable security standard**
+> **Make secure behavior repeatable, measurable, and easy to maintain.**
 
 ---
 
-## Core Concepts
+# Why Apatheia?
 
-* **Time-based security hygiene** (daily / weekly / monthly)
-* **Low-friction automation**
-* **Defense-in-depth**
-* **Remote-first threat model**
-* **Zero Trust mindset**
+Most security incidents are caused by:
 
----
+- Forgotten updates
+- Weak credential hygiene
+- Missing backups
+- Configuration drift
+- Lack of periodic security reviews
 
-## Security Tasks Protocol
+Apatheia turns these into a recurring protocol instead of relying on memory.
 
-### 🔁 Daily Tasks (Automated / Silent Where Possible)
+It is designed for:
 
-These are designed to be **automatic**, with alerts only on failure.
-
-* Automated backups verification
-* Operating system & application update checks
-* Antivirus / EDR scan status
-* System & security log review
-
----
-
-### 📆 Weekly Tasks (Preventive Controls)
-
-Focused on **misconfiguration drift** and account security.
-
-* Offline / air-gapped backup verification
-* File and folder permission audit
-* Email security settings review (SPF, DKIM, DMARC)
-* 2FA / MFA enforcement and verification
+- Security professionals
+- Compliance analysts
+- Remote employees
+- Freelancers
+- Consultants
+- Developers
+- Anyone managing their own workstation
 
 ---
 
-### 🗓 Monthly Tasks (Hardening & Risk Reduction)
+# Design Principles
 
-Longer-cycle protections and resilience checks.
-
-* Anti-ransomware protection verification
-* Password manager / keychain audit
-* Hardware security key (YubiKey or equivalent) validation
-* Physical security review (biometrics, lock screen, camera/mic)
-* Phishing awareness validation
-* AI-based threat monitoring status
-* Cyber insurance review
-* Router / network device firmware updates
-* Anti-theft & device tracking apps verification
+- Security should be boring.
+- Security should be scheduled.
+- Security should be documented.
+- Security should be measurable.
+- Automation should replace memory whenever possible.
 
 ---
 
-## Additional Security Recommendations
+# Alignment with SOC 2
 
-These are **strongly recommended extensions** to the core protocol and may be enforced depending on the environment.
+Apatheia is **not a SOC 2 certification framework**.
 
-### 🔐 Data Protection
+Instead, it helps individuals adopt security practices that support many of the security objectives commonly found in SOC 2 environments, including:
 
-* Full-disk encryption on laptops and mobile devices
-* Encrypted communications for sensitive data
+- Logical access management
+- System monitoring
+- Change management
+- Endpoint protection
+- Backup verification
+- Risk reduction
+- Asset protection
+- Incident preparedness
 
-### 🖥 Remote Access Security
-
-* Remote desktop access only via secure VPN
-* Enforced encryption for all remote sessions
-
-### 🔑 Credential Hygiene
-
-* Periodic password rotation for critical systems
-* Immediate rotation after suspected compromise
+This makes it useful for professionals working in SOC 2 environments who want a repeatable personal security routine.
 
 ---
 
-## Advanced Security Architecture (Optional but Recommended)
+# Security Hygiene Protocol
 
-These features elevate Apatheia from hygiene to **enterprise-grade security posture**.
+## Daily Controls
 
-### 🌐 VPN (Virtual Private Network)
+These should require little or no manual effort.
 
-* Mandatory VPN usage on untrusted networks
-* Strong encryption (AES-256)
-* DNS leak protection
+### Endpoint Security
 
-### 🧠 Zero Trust Architecture (ZTA)
+- Verify endpoint protection is running
+- Verify EDR/AV signatures are current
+- Review security notifications
+- Confirm firewall is enabled
 
-* Continuous authentication and authorization
-* Least-privilege access model
-* Identity and Access Management (IAM) integration
+### System Health
 
-  * Example: Okta, Azure AD
+- Verify operating system updates
+- Verify application updates
+- Review failed login attempts
+- Verify time synchronization
 
-### ☁ Cloud Security (CASB)
+### Data Protection
 
-* Cloud Access Security Broker integration
-* SaaS activity monitoring and data protection
-* Examples: Netskope, McAfee CASB
-
----
-
-## RMM Integration Vision
-
-Apatheia is designed to be:
-
-* Imported as **scripts, policies, or task templates**
-* Mapped directly into **NinjaOne checks and automations**
-* Used as a **baseline security profile** for endpoints
-* Extended via plugins or custom checks
-
-Future versions will include:
-
-* Prebuilt NinjaOne policies
-* JSON/YAML task definitions
-* Compliance scoring
-* Alert severity mapping
+- Verify scheduled backups completed successfully
+- Confirm cloud synchronization status
+- Check available disk space
 
 ---
 
-## Target Users
+## Weekly Controls
 
-* Remote workers & freelancers
-* MSPs and IT administrators
-* Security-conscious teams
-* RMM platform users
-* Solo developers and consultants
+These reduce configuration drift.
+
+### Access Management
+
+- Review MFA status
+- Remove unused accounts
+- Review browser extensions
+- Review installed software
+
+### Backup Validation
+
+- Test restoring a backup
+- Verify offline or immutable backup availability
+
+### Security Review
+
+- Review endpoint logs
+- Check startup applications
+- Review scheduled tasks
+- Verify disk encryption remains enabled
+
+### Network
+
+- Review Wi-Fi devices
+- Check router firmware availability
+- Verify DNS configuration
 
 ---
 
-## Status
+## Monthly Controls
 
-🚧 **Active development**
-Currently transitioning from an Electron-based task engine into a **modular security protocol and RMM-ready solution**.
+These improve long-term resilience.
+
+### Identity Security
+
+- Audit password manager
+- Remove unused credentials
+- Rotate privileged passwords if required
+- Review recovery methods
+
+### Device Hardening
+
+- Verify BIOS/UEFI updates
+- Review Secure Boot status
+- Review BitLocker/FileVault status
+- Verify screen lock policies
+
+### Privacy
+
+- Review application permissions
+- Review browser privacy settings
+- Remove unnecessary software
+
+### Risk Management
+
+- Review phishing awareness
+- Review recent security incidents
+- Review security documentation
+- Update emergency recovery information
 
 ---
 
-## Philosophy
+## Quarterly Controls
 
-> Security should not depend on motivation, memory, or discipline.
-> It should be **automatic, boring, and always on**.
-
-**Apatheia exists to make that happen.**
+- Test full disaster recovery
+- Review hardware inventory
+- Review trusted devices
+- Review security architecture
+- Review authentication methods
+- Replace aging backups if necessary
 
 ---
 
-**How Compliance Is Now Calculated (simple & defensible)**
+# Compliance Score
 
-Each task has a weight:
+Each control has a severity.
 
-> Severity increases impact (critical > high > medium)
+| Severity | Weight |
+|----------|--------:|
+| Critical | 5 |
+| High | 3 |
+| Medium | 2 |
+| Low | 1 |
 
-> Final score = weighted percentage
+Compliance is calculated using a weighted percentage.
 
-Workspace can:
+```
+Compliance = Completed Weight / Total Weight × 100
+```
 
-> Pass overall
+Status:
 
-> Be At Risk
+| Score | Status |
+|--------|--------|
+| 95–100% | Compliant |
+| 80–94% | At Risk |
+| Below 80% | Non-Compliant |
 
-> Be Non-Compliant
+The objective is continuous improvement rather than perfection.
+
+---
+
+# Example Control
+
+| Control | Frequency | Severity |
+|----------|-----------|----------|
+| Verify backups | Daily | Critical |
+| Verify MFA | Weekly | High |
+| Review browser extensions | Weekly | Medium |
+| Test restore procedure | Monthly | Critical |
+
+---
+
+# Mapping to SOC 2 Security Principles
+
+| Apatheia Control | SOC 2 Alignment |
+|------------------|-----------------|
+| MFA verification | Logical Access |
+| Backup verification | Availability |
+| Endpoint protection | System Operations |
+| Update management | Change Management |
+| Log review | Monitoring Activities |
+| Password manager audit | Credential Security |
+| Disk encryption | Data Protection |
+| Device inventory | Asset Management |
+
+---
+
+# Automation
+
+Apatheia is designed so repetitive tasks can be automated.
+
+Possible integrations include:
+
+- NinjaOne
+- Microsoft Intune
+- PowerShell
+- Bash
+- Windows Task Scheduler
+- cron
+- GitHub Actions
+- Google Calendar reminders
+- Notion databases
+- Obsidian Tasks
+
+Automation should generate alerts only when a control fails.
+
+---
+
+# Roadmap
+
+## Apatheia Lite
+
+A minimal version containing only Daily Controls.
+
+## Compliance Dashboard
+
+Simple weighted scoring with historical trends.
+
+## Notion Template
+
+Track controls and compliance visually.
+
+## Printable Checklist
+
+PDF version for offline use.
+
+## YAML Configuration
+
+Machine-readable control definitions.
+
+## RMM Profiles
+
+Ready-to-import policies for endpoint management platforms.
+
+## CLI Version
+
+Run scheduled security checks from the terminal.
+
+---
+
+# Who Is This For?
+
+- SOC analysts
+- Compliance professionals
+- Remote workers
+- Independent consultants
+- Developers
+- IT administrators
+- MSP technicians
+- Privacy-conscious individuals
+
+---
+
+# Non-Goals
+
+Apatheia is **not**:
+
+- an antivirus
+- an EDR platform
+- a vulnerability scanner
+- a SIEM
+- a compliance certification
+- a replacement for organizational security policies
+
+It is a **personal security hygiene protocol**.
+
+---
+
+# Philosophy
+
+> Good security is rarely about knowing more.
+>
+> It is about forgetting less.
+
+Apatheia exists to make secure habits consistent, measurable, and sustainable.
 
 
-**
-Next logical public updates:**
+---
 
+## Future Ideas
 
-Notion scoring template
-
-“Apatheia Lite” (only daily tasks)
-
-Printable checklist PDF
-
-Automation bridge (Google Calendar → webhook)
+- JSON control definitions
+- YAML policies
+- Risk scoring engine
+- Compliance history
+- Automated evidence collection
+- Markdown audit reports
+- Browser extension
+- Desktop reminder application
+- Mobile companion app
+- Public control library
